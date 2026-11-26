@@ -1,0 +1,35 @@
+name: Bug report
+description: Report unexpected behavior in the notebooks or skills
+labels: ["bug"]
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: What did you observe, and what did you expect instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - agent-notebook (core skill)
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal sequence; include the trigger phrase if relevant.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment
+      description: Agent platform, OS, Obsidian version (if applicable).
+    validations:
+      required: false
